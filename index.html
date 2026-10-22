@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deepak Wadhwa | Stock Market Insights</title>
-  <!-- Meta Pixel Code (NEW) -->
+  <!-- Meta Pixel Code (NEW ID: 1444604064298994) -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -14,11 +14,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1666353238404989');
+    fbq('init', '1444604064298994');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1666353238404989&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=1444604064298994&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
   <style>
@@ -265,13 +265,17 @@
   </div>
 
   <script>
-    // Ensure meta pixel already loaded; no additional tracking needed,
-    // but we can track a click event for Telegram join (optional, safe)
+    // Track Telegram join click as a Lead event through the new pixel
     (function() {
       const joinBtn = document.getElementById('telegramJoinBtn');
       if (joinBtn && typeof fbq !== 'undefined') {
         joinBtn.addEventListener('click', function() {
-          fbq('track', 'Lead'); // standard event, compliant
+          fbq('track', 'Lead', {
+            content_name: 'DEEPAK_WADHWA_Telegram_Join',
+            content_category: 'Stock_Market_Channel',
+            pixel_id: '1444604064298994'
+          });
+          console.log('✅ fbq track: Lead (pixel 1444604064298994)');
         });
       }
     })();
